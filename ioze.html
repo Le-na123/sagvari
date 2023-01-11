@@ -1,28 +1,54 @@
 <body>
-    <div id="a">cica</div>
+    <div class="c" id="a" onclick="
+        this.style.display='none'
+        document.getElementById('p').style.display='inline-block'"    
+    ">cica</div>
+        <div class="c" id="p" onclick="
+        this.style.display='none'
+        document.getElementById('a').style.display='inline-block'
+    ">Újra</div>  
 </body>
 <style>
-    #a {
-        background-color: antiquewhite;
+  
+</style>
+
+<style>
+    .c {
+        background-color: rgb(228, 142, 30);
         display: inline-block;
         padding: 10px;
         border-radius: 6px;
-        box-shadow:  1px 1px 3px black;
-        text-shadow: 1px 1px 4px blue;
+        text-emphasis-color: white;
+        box-shadow:  1px 1px 3px rgb(29, 27, 27);
+        text-shadow: 1px 1px 4px rgb(214, 214, 228);
         position: fixed;
         top: 30px;
         left: 30px;
         transition: 1s;
+        text-align: center;
+        cursor: pointer;
+        user-select: none;
+    }
+    #p {
+        display: none;
+        margin: auto;
+        left: 350px;
+        top: 300px;
     }
 </style>
 <script>
     o = document.getElementById("a")           
     setInterval(()=>{
+        m = Math.random()*200+6
         o.style.top=Math.random()*300+30
         o.style.left=Math.random()*300+30
-        o.style.backgroudcolor=rgb (S(
+        o.style.fontSize=m
+        o.style.backgroundColor=`rgb(${
             Math.random()*256
-    },S{
-        )
-     , 2000)                                       
+        },${
+            Math.random()*256
+        },${
+            Math.random()*256
+        })`
+    }, 1100)                                      
 </script>
