@@ -1,18 +1,37 @@
 <body>
     <div class="c" id="a" onclick="
         this.style.display='none'
-        document.getElementById('p').style.display='inline-block'"    
-    ">cica</div>
-        <div class="c" id="p" onclick="
+        kecskegida++
+        if (kecskegida == 3)
+            document.getElementById('p').style.display='inline-block'"
+    ">ezt kapd el</div>
+    <div class="c" id="a2" onclick="
         this.style.display='none'
-        document.getElementById('a').style.display='inline-block'
+        kecskegida++
+        if (kecskegida == 3)
+            document.getElementById('p').style.display='inline-block'" 
+    ">meg ezt</div>
+    <div class="c" id="a3" onclick="
+        this.style.display='none'
+        kecskegida++
+        if (kecskegida == 3)
+            document.getElementById('p').style.display='inline-block'"
+    ">meg ezt is</div>
+        <div class="c" id="p" onclick="
+            this.style.display='none'
+            document.getElementById('a').style.display='inline-block'
+            document.getElementById('a2').style.display='inline-block'
+            document.getElementById('a3').style.display='inline-block'
+            kecskegida = 0
     ">Újra</div>  
 </body>
 <style>
-  
-</style>
-
-<style>
+    #a2 {
+        left: 150px;
+    }
+    #a3 {
+        left: 300px;
+    }
     .c {
         background-color: rgb(228, 142, 30);
         display: inline-block;
@@ -37,18 +56,25 @@
     }
 </style>
 <script>
-    o = document.getElementById("a")           
+    kecskegida = 0
+    o = [
+        document.getElementById("a"), 
+        document.getElementById("a2"),
+        document.getElementById("a3")
+    ]    
     setInterval(()=>{
-        m = Math.random()*200+6
-        o.style.top=Math.random()*300+30
-        o.style.left=Math.random()*300+30
-        o.style.fontSize=m
-        o.style.backgroundColor=`rgb(${
-            Math.random()*256
-        },${
-            Math.random()*256
-        },${
-            Math.random()*256
-        })`
+        o.map(v => {
+            m = Math.random()*100+6
+            v.style.top=Math.random()*300+30
+            v.style.left=Math.random()*300+30
+            v.style.fontSize=m
+            v.style.backgroundColor=`rgb(${
+                Math.random()*256
+            },${
+                Math.random()*256
+            },${
+                Math.random()*256
+            })`
+        }) 
     }, 1100)                                      
 </script>
