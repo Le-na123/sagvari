@@ -2,45 +2,55 @@
     <div class="c" id="a" onclick="
         this.style.display='none'
         kecskegida++
-        if (kecskegida == 3)
+        if (kecskegida == 4)
             document.getElementById('p').style.display='inline-block'"
     ">ezt kapd el</div>
     <div class="c" id="a2" onclick="
         this.style.display='none'
         kecskegida++
-        if (kecskegida == 3)
+        if (kecskegida == 4)
+            document.getElementById('p').style.display='inline-block'" 
+     ">haha</div>
+     <div class="c" id="a3" onclick="
+         this.style.display='none'
+         kecskegida++
+        if (kecskegida == 4)
             document.getElementById('p').style.display='inline-block'" 
     ">meg ezt</div>
-    <div class="c" id="a3" onclick="
+    <div class="c" id="a4" onclick="
         this.style.display='none'
         kecskegida++
-        if (kecskegida == 3)
+        if (kecskegida == 4)
             document.getElementById('p').style.display='inline-block'"
     ">meg ezt is</div>
-        <div class="c" id="p" onclick="
-            this.style.display='none'
+    <div class="c" id="p" onclick="
+        this.style.display='none'
             document.getElementById('a').style.display='inline-block'
             document.getElementById('a2').style.display='inline-block'
             document.getElementById('a3').style.display='inline-block'
+            document.getElementById('a4').style.display='inline-block'
             kecskegida = 0
     ">Újra</div>  
 </body>
 <style>
     #a2 {
-        left: 150px;
+        left: 200px;
     }
     #a3 {
-        left: 300px;
+        left: 400px;
+    }
+    #a4 {
+        left: 600px;
     }
     .c {
-        background-color: rgb(228, 142, 30);
+        background-color: brown;
         display: inline-block;
-        padding: 10px;
+        padding: 5px;
         border-radius: 6px;
         text-emphasis-color: white;
         box-shadow:  1px 1px 3px rgb(29, 27, 27);
         text-shadow: 1px 1px 4px rgb(214, 214, 228);
-        position: fixed;
+        position: relative;
         top: 30px;
         left: 30px;
         transition: 1s;
@@ -51,7 +61,7 @@
     #p {
         display: none;
         margin: auto;
-        left: 350px;
+        left: 600px;
         top: 300px;
     }
 </style>
@@ -60,7 +70,8 @@
     o = [
         document.getElementById("a"), 
         document.getElementById("a2"),
-        document.getElementById("a3")
+        document.getElementById("a3"),
+        document.getElementById("a4"),
     ]    
     setInterval(()=>{
         o.map(v => {
@@ -71,9 +82,11 @@
             v.style.backgroundColor=`rgb(${
                 Math.random()*256
             },${
-                Math.random()*256
+                Math.random()*345
             },${
-                Math.random()*256
+                Math.random()*789
+            },${
+                Math.random()*652
             })`
         }) 
     }, 1100)                                      
