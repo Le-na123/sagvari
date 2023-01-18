@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
 *
 {
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,7 +30,7 @@ header .logo
   position: relative;
   width: 60px;
   height: 60px;
-  background: url(https://i.ibb.co/HrfVRcx/menu.png);
+  background: url('https://i.ibb.co/HrfVRcx/menu.png');
   background-repeat: no-repeat;
   background-size: 30px;
   background-position: center;
@@ -37,7 +38,7 @@ header .logo
 }
 .toggle.active
 {
-  background: url(https://i.ibb.co/rt3HybH/close.png);
+  background: url('https://i.ibb.co/rt3HybH/close.png');
   background-repeat: no-repeat;
   background-size: 25px;
   background-position: center;
@@ -79,7 +80,7 @@ header .logo
   left: 0;
   width: 100%;
   height: 100%;
-  background: #03a9f4;
+  background: #0f796b;
   mix-blend-mode: overlay;
 }
 .text
